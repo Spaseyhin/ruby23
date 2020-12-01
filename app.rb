@@ -25,11 +25,15 @@ end
 get '/visit' do
 	erb :visit
 end
+get '/eee' do
+	erb :eee
+end
 post '/visit' do
 	@username = params[:username]
 	@date = params[:date]
 	@phone = params[:phone]
 	@pric = params[:pric]
+
 	f = File.open './public/user.txt', 'a'
 	f.write "user: #{@username}\n phone:#{@phone}\n dite & time #{@date}\n 
 the hairdresser #{@pric}\n\n"

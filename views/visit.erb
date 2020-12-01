@@ -1,41 +1,58 @@
-
-
-<div class="col-md-8">
- <h2>Записаться</h2>
-  <div class="row">
-   <div class="col-md-4">
-     <p>На этой странице вы можете записаться в барбершоп</p>
-        <form action = "/visit" method="POST"  class="form-horizontal">
-          <div class="form-group">
-            <div class="col-sm-10">
-              <input name ="username" type="text" class="form-control" id="inputEmail3" placeholder="Ваше имя">
-            </div>
-          </div>
-          <div class="form-group">
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div class="col-md-8">
+   <h2>Записаться</h2>
+    <div class="row">
+     <div class="col-md-4">
+       <p>На этой странице вы можете записаться в барбершоп</p>
+          <form action = "/visit" method="POST"  class="form-horizontal">
+            <div class="form-group">
               <div class="col-sm-10">
-                <input name ="phone" type="text" class="form-control" id="inputEmail3" placeholder="Ваш номер телефона">
+                <input  name ="username" type="text" class="form-control" id="inputEmail3" placeholder="Ваше имя">
               </div>
             </div>
             <div class="form-group">
-              <div class="col-sm-10">
-                <input name ="date" type="text" class="form-control" id="inputEmail3" placeholder="Дата визита">
+                <div class="col-sm-10">
+                  <input name ="phone" type="text" class="form-control" placeholder="Ваш номер телефона">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10">
+                  <input name ="date" type="text" class="form-control" id="inputEmail3" placeholder="Дата визита">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset- col-sm-10">
+                  <button type="submit" class="btn btn-primary">Записатся</button>
+                </div>
               </div>
             </div>
-            <div class="form-group">
-              <div class="col-sm-offset- col-sm-10">
-                <button type="submit" class="btn btn-primary">Записатся</button>
-              </div>
+            <div class="col-md-5 ">
+              <h4>Выберите прикхмахера</h4>
+              <select name ="pric" class="form-control" id="exampleFormControlSelect1">
+                <option>Walter White</option>
+                <option>Jessie Pinkman</option>
+                <option>Gus Fring</option>
+              </select>
+              <select id = "aa" name="hye" >
+                <option value="#7bd148">Green</option>
+              </select>
+              <script type="text/javascript">
+                $(function(){
+                  $('#aa').simplecolorpicker();
+                }
+              </script>
             </div>
           </div>
-          <div class="col-md-3 ">
-            <h4>Выберите прикхмахера</h4>
-            <select name ="pric" class="form-control" id="exampleFormControlSelect1">
-              <option>Walter White</option>
-              <option>Jessie Pinkman</option>
-              <option>Gus Fring</option>
-            </select>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
+  </script>
+</body>
+</html>
+
+
