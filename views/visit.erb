@@ -1,58 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <div class="col-md-8">
-   <h2>Записаться</h2>
-    <div class="row">
-     <div class="col-md-4">
-       <p>На этой странице вы можете записаться в барбершоп</p>
-          <form action = "/visit" method="POST"  class="form-horizontal">
-            <div class="form-group">
-              <div class="col-sm-10">
-                <input  name ="username" type="text" class="form-control" id="inputEmail3" placeholder="Ваше имя">
-              </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                  <input name ="phone" type="text" class="form-control" placeholder="Ваш номер телефона">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-10">
-                  <input name ="date" type="text" class="form-control" id="inputEmail3" placeholder="Дата визита">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset- col-sm-10">
-                  <button type="submit" class="btn btn-primary">Записатся</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5 ">
-              <h4>Выберите прикхмахера</h4>
-              <select name ="pric" class="form-control" id="exampleFormControlSelect1">
-                <option>Walter White</option>
-                <option>Jessie Pinkman</option>
-                <option>Gus Fring</option>
-              </select>
-              <select id = "aa" name="hye" >
-                <option value="#7bd148">Green</option>
-              </select>
-              <script type="text/javascript">
-                $(function(){
-                  $('#aa').simplecolorpicker();
-                }
-              </script>
-            </div>
+
+
+
+      <form action = "/visit" method="POST"  class="form-horizontal">
+        <div class="form-group">
+
+          <div class="col-sm-4">
+            <h1>    On this page </h1>
+            <p> you can sign up for a barbershop</p>
           </div>
-        </form>
+          <div class="col-sm-4">
+            <input  name ="username" type="text" class="form-control" id="inputEmail3" placeholder="Your name" value="<%=@username%>">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4">
+            <input name ="phone" type="text" class="form-control"  id="inputEmail3" placeholder="Your Phone"
+            value="<%=@phone%>">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4">
+            <input name ="date" type="text" class="form-control" id="inputEmail3" placeholder="Date"
+            value="<%=@date%>">
+          </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+          <div class="col-sm-4">
+            <select name ="pric" class="form-control" id="exampleFormControlSelect1">
+            <option>Walter White</option>
+            <option>Jessie Pinkman</option>
+            <option>Gus Fring</option>
+            </select>
+          </div>
+        </div>
+          <div class="col-sm-4">
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Записатся</button>
+        </div>
       </div>
+      </form>
+      </center>
     </div>
-  </script>
-</body>
-</html>
+
+
 
 
