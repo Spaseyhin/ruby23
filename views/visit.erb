@@ -23,9 +23,9 @@
         <div class="form-group">
           <div class="col-sm-4">
             <select name ="pric" class="form-control" id="exampleFormControlSelect1">
-            <option>Walter White</option>
-            <option>Jessie Pinkman</option>
-            <option>Gus Fring</option>
+            <option <%= @pric == 'Walter White' ? 'selected' : ''%>>Walter White</option>
+            <option <%= @pric == 'Jessie Pinkman' ? 'selected' : ''%>>Jessie Pinkman</option>
+            <option <%= @pric == 'Gus Fring' ? 'selected' : ''%> >Gus Fring</option>
             </select>
           </div>
         </div>
