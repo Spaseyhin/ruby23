@@ -2,9 +2,21 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sqlite3'
 
+configure do
+	@db =SQLite3::Database.new 'barbershop.db'
+	@db.execute 'CREATE TABLE IF NOT EXISTS 
+	"users" 
+	(
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	 "username" TEXT,
+	 "phone" TEXT,
+	 "date" TEXT,
+	 "pric" TEXT
+	 )'
 
-
+end
 
 
 get '/' do
@@ -34,8 +46,8 @@ end
 post '/visit' do
 
 	@username = params[:username]
-	@date = params[:date]
 	@phone = params[:phone]
+	@date = params[:date]
 	@pric = params[:pric]
 	hh = {:username => 'Enter you\'r name',
 		  :date => 'Enter you\'r date',
