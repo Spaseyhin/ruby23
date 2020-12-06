@@ -3,6 +3,10 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
 
+
+
+
+
 get '/' do
 	erb :register
 end
@@ -21,14 +25,14 @@ post '/contacts' do
 	@sms = params[:sms]
 	f.write "Email: #{@email}\n Message:#{@sms}\n\n"
 	erb :cont
-end 
+end
 get '/visit' do
 
 	erb :visit
 end
 
 post '/visit' do
-	
+
 	@username = params[:username]
 	@date = params[:date]
 	@phone = params[:phone]
@@ -42,9 +46,9 @@ post '/visit' do
 			return erb :visit
 		end
 	end
-		
+
 	f = File.open './public/user.txt', 'a'
-	f.write "user: #{@username}\n phone:#{@phone}\n dite & time #{@date}\n 
+	f.write "user: #{@username}\n phone:#{@phone}\n dite & time #{@date}\n
 the hairdresser #{@pric}\n\n"
 	erb :welcome
 end
